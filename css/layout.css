@@ -37,40 +37,19 @@ td {
     padding-right: 1rem;
 }
 
-
-tr td {
-    padding-right: 10rem;
-}
-#logo {
-    width: 10rem;
-    display: flex;
-    
-    
+.pdf {
+    color: red;
+    padding: 0 0 0 1rem;
 }
 
-footer {
-    display: flex;
-    flex-direction: row;
-    
+.envelope {
+    color: #EE784F;
+    padding: 0 1rem 0 0;
 }
 
-footer > * {
-    flex-grow: 1;
-   
-}
-
-p {
-    color: grey;
+.link {
+    color: #6FAB74; 
+    padding: 0 1rem  0 0;
 }
 
 
-#orange {
-    color: #E68E6F;
-}
-#green {
-    color: #71AD48;
-}
-
-#kolmas tr td {
-    padding-right: 17rem;
-}

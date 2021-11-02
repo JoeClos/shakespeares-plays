@@ -1,37 +1,114 @@
-var style = document.getElementById("flex");
-var li1 = document.getElementById("noDisc1");
-var li2 = document.getElementById("noDisc2");
-var li3 = document.getElementById ("noDisc3");
-var firstList = document.getElementById("grey1");
-var secondList = document.getElementById("grey2");
-var thirdList = document.getElementById("grey3");
-var red1 = document.getElementById("red1");
-var red2 = document.getElementById("red2");
-var red3 = document.getElementById("red3");
-var red4 = document.getElementById("red4");
-var greyRow1 = document.getElementById("odd1");
-var greyRow2 = document.getElementById("odd2");
-var greyRow3 = document.getElementById("odd3");
-var greyRow4 = document.getElementById("odd4");
-var greyRow5 = document.getElementById("odd5");
-var footer = document.getElementById("footer");
+document.body.style = "margin: 1rem 0 0 5rem";
+var first = document.getElementById('eka');
+var childUl = first.getElementsByTagName("ul")[0];
+childUl.classList.add('rivit-vierekkain');
 
 
-style.style =  "display: flex;", "flex-flow: row;", "flex-wrap: wrap;";
-li1.style = "list-style: none";
-li2.style = "list-style: none";
-li3.style = "list-style: none";
-firstList.style = "background-color: lightgrey; margin: 1rem 1rem 0 0";
-secondList.style = "background-color: lightgrey; margin: 1rem 1rem 0 0";
-thirdList.style = "background-color: lightgrey; margin: 1rem 1rem 0 0";
-red1.style = "text-decoration-style: dotted; color: #7F170E;     font-weight: bold; font-style: italic; ";
-red2.style = "text-decoration-style: dotted; color: #7F170E;     font-weight: bold; font-style: italic;";
-red3.style = "text-decoration-style: dotted; color: #7F170E;     font-weight: bold; font-style: italic;";
-red4.style = "text-decoration-style: dotted; color: #7F170E;     font-weight: bold; font-style: italic;";
+childUl.style = "display: inline-flex;", "flex-flow: row;", "flex-wrap: wrap;";
 
-greyRow1.style = "background-color: lightgrey";
-greyRow2.style = "background-color: lightgrey";
-greyRow3.style = "background-color: lightgrey";
-greyRow4.style = "background-color: lightgrey";
-greyRow5.style = "background-color: lightgrey";
-footer.style = "padding-top: 5rem";
+var childList = first.getElementsByTagName("li")[0];
+childList.classList.add("noDisc");
+
+
+var childList1 = first.getElementsByTagName("li")[5];
+childList1.classList.add("noDisc");
+
+
+/*
+var envelopeIcon = first.getElementsByTagName("a")[2];
+var icon1 = document.createElement("span");
+icon1.setAttribute("class", "fas fa-envelope");
+
+envelopeIcon.appendChild(icon1);
+icon1.style.color = "#EE784F";
+
+*/
+
+var childList2 = first.getElementsByTagName("li")[9];
+childList2.classList.add("noDisc");
+
+var a = document.querySelectorAll(".noDisc");
+for (var i = 0; i < a.length; i++){
+    a[i].style = "list-style: none;";
+}
+
+
+var grey = first.getElementsByTagName("ul")[1];
+grey.classList.add("greyColor");
+var grey1 = first.getElementsByTagName("ul")[2];
+grey1.classList.add("greyColor");
+var grey2 = first.getElementsByTagName("ul")[3];
+grey2.classList.add("greyColor");
+
+var b = document.querySelectorAll(".greyColor");
+for (var j = 0; j < b.length; j++){
+    b[j].style = "background-color: lightgrey; margin: 1rem 1rem 0 0;";
+}
+
+
+var links = document.links;
+for (i=0; i<links.length; ++i) {
+    links[i].classList.add("dotted");
+    links[i].style = "text-decoration-style: dotted; color: #7F170E; font-weight: bold; font-style: italic; font-weight: bold;"
+   
+    
+}
+
+
+var pdf = document.getElementsByTagName("a")[1];
+
+pdf.insertAdjacentHTML("afterend", '<span class="pdf fas fa-file-pdf"></span>');
+
+
+document.getElementsByTagName("a")[2].insertAdjacentHTML("beforebegin", ' <span class="envelope fas fa-envelope"></>');
+
+document.getElementsByTagName("a")[2].insertAdjacentHTML("beforebegin", '<span class="link fas fa-external-link-alt"></span>');
+
+document.getElementsByTagName("a")[3].insertAdjacentHTML("beforebegin", '<span class="link fas fa-external-link-alt"></span>');
+/*
+var pdfIcon = first.getElementsByTagName("a")[1];
+
+var icon = document.createElement("span");
+icon.setAttribute("class","fas fa-file-pdf");
+pdfIcon.appendChild(icon);
+icon.style.color = "#CC392B";
+*/
+
+
+
+/*
+var dotted = first.getElementsByTagName("a")[0];
+
+dotted.style = "text-decoration-style: dotted; color: #7F170E;     font-weight: bold; font-style: italic;"
+
+
+
+
+
+var dotted3 = first.getElementsByTagName("a")[3];
+dotted3.style = "text-decoration-style: dotted; color: #7F170E;     font-weight: bold; font-style: italic;"
+*/
+
+
+var tr = document.getElementsByTagName('tr');
+for(i=0;i<tr.length;i++){
+    if(i%2!=0) tr[i].style= "background-color: lightgrey; margin: 1rem 1rem 0 0";
+}
+
+
+var data1 = document.getElementsByTagName("td");
+for(i=0;i<data1.length;i++){
+    data1[i].style= "padding-right: 17rem";
+    
+
+}
+
+var data2 = document.getElementsByTagName("td");
+for(i=0;i < data2.length - 6 ;i++){
+    data2[i].style= "padding-right: 10rem";
+    
+}
+
+
+
+ 
